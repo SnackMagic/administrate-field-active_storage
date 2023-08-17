@@ -24,6 +24,10 @@ module Administrate
         options.fetch(:index_display_count) { attached? && attachments.count != 1 }
       end
 
+      def show_prefix?
+        options.fetch(:show_prefix, true)
+      end
+
       def show_display_preview?
         options.fetch(:show_display_preview, true)
       end
